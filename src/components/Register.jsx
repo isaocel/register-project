@@ -123,7 +123,11 @@ export default function Register() {
                 invalid={errors.ad}
                 className="form-input"
               />
-              {errors.ad && <FormFeedback>{errorMessages.ad}</FormFeedback>}
+              {errors.ad && (
+                <FormFeedback data-cy="error-ad">
+                  {errorMessages.ad}
+                </FormFeedback>
+              )}
             </FormGroup>
             <FormGroup>
               <Label for="soyad">Soyad</Label>
@@ -138,7 +142,9 @@ export default function Register() {
                 className="form-input"
               />
               {errors.soyad && (
-                <FormFeedback>{errorMessages.soyad}</FormFeedback>
+                <FormFeedback data-cy="error-soyad">
+                  {errorMessages.soyad}
+                </FormFeedback>
               )}
             </FormGroup>
             <FormGroup>
@@ -154,7 +160,9 @@ export default function Register() {
                 className="form-input"
               />
               {errors.email && (
-                <FormFeedback>{errorMessages.email}</FormFeedback>
+                <FormFeedback data-cy="error-email">
+                  {errorMessages.email}
+                </FormFeedback>
               )}
             </FormGroup>
             <FormGroup>
@@ -170,7 +178,9 @@ export default function Register() {
                 className="form-input"
               />
               {errors.password && (
-                <FormFeedback>{errorMessages.password}</FormFeedback>
+                <FormFeedback data-cy="error-password">
+                  {errorMessages.password}
+                </FormFeedback>
               )}
             </FormGroup>
             <Button
@@ -192,7 +202,7 @@ export default function Register() {
         </CardBody>
         {submitSuccess && userId && (
           <CardFooter className="card-footer">
-            <strong>ID:</strong> {userId}
+            <strong>Kullanıcı ID:</strong> {userId}
           </CardFooter>
         )}
       </Card>
