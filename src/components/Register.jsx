@@ -192,7 +192,7 @@ export default function Register() {
         </CardBody>
         {submitSuccess && userId && (
           <CardFooter className="card-footer">
-            <strong>Kullanıcı ID:</strong> {userId}
+            <strong>ID:</strong> {userId}
           </CardFooter>
         )}
       </Card>
